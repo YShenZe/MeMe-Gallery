@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const [,, inputDir = './memes', outputFile = './index.html'] = process.argv;
+const [,, inputDir = './memes', outputFile = './dist/index.html'] = process.argv;
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.gif', '.webp']);
 
 function escapeHtml(unsafe) {
