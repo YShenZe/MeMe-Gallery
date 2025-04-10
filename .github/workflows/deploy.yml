@@ -20,14 +20,9 @@ jobs:
         run: |
           node app.js
 
-      - name: Copy memes directory
-        run: |
-          mkdir -p dist/memes
-          cp -r memes/* dist/memes/
-
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./
           keep_files: false
