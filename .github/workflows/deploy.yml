@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 当 main 分支有新提交时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main  # 检出 main 分支代码
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # 使用 Node.js 20，根据你的项目需求调整
+
+      - name: Install dependencies
+        run: npm install  # 或者使用 pnpm 或 yarn，根据你的项目配置
+
+      - name: Build with Vite
+        run: npm run build  # 假设你的构建命令是 `npm run build`
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # Vite 构建后的输出目录，通常为 dist
+          force_orphan: true  # 确保 gh-pages 分支只包含构建后的文件
