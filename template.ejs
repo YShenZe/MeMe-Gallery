@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= site.title %> - 第<%= currentPage %>页</title>
+  <link href="https://cdn.mengze.vip/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <% custom_css.forEach(css => { %>
+    <link rel="stylesheet" href="<%= css %>">
+  <% }); %>
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <header class="text-center mb-5 p-5 bg-primary text-white rounded-3">
+      <h1 class="display-4"><%= site.title %></h1>
+      <p class="lead"><%= site.description %></p>
+    </header>
+
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+      <% images.forEach(img => { %>
+        <div class="col">
+          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+               onclick="document.getElementById('lightboxImage').src = '<%= img %>'">
+            <img src="<%= img %>" class="card-img-top" loading="lazy" 
+                 style="height: 250px; object-fit: cover">
+            <div class="card-body">
+              <p class="card-text text-truncate"><%= path.basename(img) %></p>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+
+    <% if (totalPages > 1) { %>
+      <nav class="mt-5" aria-label="分页导航">
+        <ul class="pagination justify-content-center">
+          <% if (prevPage) { %>
+            <li class="page-item">
+              <a class="page-link" href="<%= path.basename(prevPage) %>">←</a>
+            </li>
+          <% } %>
+          <% Array.from({length: totalPages}, (_, i) => i + 1).forEach(p => { %>
+            <li class="page-item <%= p === currentPage ? 'active' : '' %>">
+              <a class="page-link" href="<%= getPageUrl(p) %>"><%= p %></a>
+            </li>
+          <% }); %>
+          <% if (nextPage) { %>
+            <li class="page-item">
+              <a class="page-link" href="<%= path.basename(nextPage) %>">→</a>
+            </li>
+          <% } %>
+        </ul>
+      </nav>
+    <% } %>
+
+    <footer class="mt-5 py-4 text-center text-muted">
+      <%= footer %>
+    </footer>
+  </div>
+
+  <!-- 模态框 -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-0">
+          <img id="lightboxImage" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.mengze.vip/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <% custom_js.forEach(js => { %>
+    <script src="<%= js %>"></script>
+  <% }); %>
+</body>
+</html>
