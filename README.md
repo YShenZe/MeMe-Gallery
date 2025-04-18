@@ -20,9 +20,9 @@
 1. 将图片放入`./memes`目录（或指定其他目录）
 2. 运行生成命令：
 ```bash
-npx node script.js [输入目录] [输出文件]
+npx node app.js [输入目录] [输出文件]
 # 示例（使用默认参数）：
-# node script.js ./memes ./index.html
+# node app.js ./memes ./index.html
 ```
 
 ### 自动部署
@@ -47,4 +47,4 @@ npx node script.js [输入目录] [输出文件]
 3. 首次部署后需等待1-2分钟生效
 
 ## 协议
-MIT License | © [你的名字]
+MIT License | © 梦泽
