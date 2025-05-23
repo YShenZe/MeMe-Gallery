@@ -4,14 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= site.title %> - 第<%= currentPage %>页</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.mengze.vip/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Roboto Font (Material Design) -->
+  <link href="https://cdn.mengze.vip/npm/@fontsource/roboto@5.0.8/index.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://cdn.mengze.vip/npm/@material-design-icons/font@0.14.13/index.css" rel="stylesheet">
   <% custom_css.forEach(css => { %>
     <link rel="stylesheet" href="<%= css %>">
   <% }); %>
+  <!-- Custom MD Styles -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+    .header {
+      background: linear-gradient(135deg, #3f51b5, #2196f3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 3rem;
+      margin-bottom: 3rem;
+    }
+    .header h1 {
+      font-weight: 500;
+      color: #ffffff;
+    }
+    .header p {
+      font-weight: 300;
+      color: #e0f7fa;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .card-body {
+      padding: 1.5rem;
+      background-color: #ffffff;
+    }
+    .card-text {
+      color: #424242;
+      font-size: 0.9rem;
+    }
+    .pagination .page-link {
+      border-radius: 8px;
+      margin: 0 4px;
+      color: #3f51b5;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+    .pagination .page-link:hover {
+      background-color: #e8eaf6;
+    }
+    .pagination .page-item.active .page-link {
+      background-color: #3f51b5;
+      border-color: #3f51b5;
+      color: #ffffff;
+    }
+    .modal-content {
+      border: none;
+      border-radius: 12px;
+      background-color: transparent;
+    }
+    .modal-body {
+      padding: 0;
+    }
+    .modal-img {
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .footer {
+      font-size: 0.9rem;
+      color: #757575;
+    }
+  </style>
 </head>
-<body class="bg-light">
+<body>
   <div class="container py-5">
-    <header class="text-center mb-5 p-5 bg-primary text-white rounded-3">
+    <header class="header text-center">
       <h1 class="display-4"><%= site.title %></h1>
       <p class="lead"><%= site.description %></p>
     </header>
@@ -19,10 +102,9 @@
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
       <% images.forEach(img => { %>
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = '<%= img %>'">
-            <img src="<%= img %>" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="<%= img %>" class="card-img-top" loading="lazy" alt="<%= path.basename(img) %>">
             <div class="card-body">
               <p class="card-text text-truncate"><%= path.basename(img) %></p>
             </div>
@@ -36,7 +118,9 @@
         <ul class="pagination justify-content-center">
           <% if (prevPage) { %>
             <li class="page-item">
-              <a class="page-link" href="<%= path.basename(prevPage) %>">←</a>
+              <a class="page-link" href="<%= path.basename(prevPage) %>">
+                <span class="material-icons">chevron_left</span>
+              </a>
             </li>
           <% } %>
           <% Array.from({length: totalPages}, (_, i) => i + 1).forEach(p => { %>
@@ -46,29 +130,32 @@
           <% }); %>
           <% if (nextPage) { %>
             <li class="page-item">
-              <a class="page-link" href="<%= path.basename(nextPage) %>">→</a>
+              <a class="page-link" href="<%= path.basename(nextPage) %>">
+                <span class="material-icons">chevron_right</span>
+              </a>
             </li>
           <% } %>
         </ul>
       </nav>
     <% } %>
 
-    <footer class="mt-5 py-4 text-center text-muted">
+    <footer class="footer mt-5 py-4 text-center">
       <%= footer %>
     </footer>
   </div>
 
   <!-- 模态框 -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1">
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-body text-center p-0">
-          <img id="lightboxImage" class="img-fluid">
+        <div class="modal-body text-center">
+          <img id="lightboxImage" class="modal-img img-fluid" alt="Lightbox Image">
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.mengze.vip/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <% custom_js.forEach(js => { %>
     <script src="<%= js %>"></script>
