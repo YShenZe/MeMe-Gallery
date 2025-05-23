@@ -4,12 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>梦泽梗图仓库 - 第4页</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.mengze.vip/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Roboto Font (Material Design) -->
+  <link href="https://cdn.mengze.vip/npm/@fontsource/roboto@5.0.8/index.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://cdn.mengze.vip/npm/@material-design-icons/font@0.14.13/index.css" rel="stylesheet">
   
+  <!-- Custom MD Styles -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+    .header {
+      background: linear-gradient(135deg, #3f51b5, #2196f3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 3rem;
+      margin-bottom: 3rem;
+    }
+    .header h1 {
+      font-weight: 500;
+      color: #ffffff;
+    }
+    .header p {
+      font-weight: 300;
+      color: #e0f7fa;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .card-body {
+      padding: 1.5rem;
+      background-color: #ffffff;
+    }
+    .card-text {
+      color: #424242;
+      font-size: 0.9rem;
+    }
+    .pagination .page-link {
+      border-radius: 8px;
+      margin: 0 4px;
+      color: #3f51b5;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+    .pagination .page-link:hover {
+      background-color: #e8eaf6;
+    }
+    .pagination .page-item.active .page-link {
+      background-color: #3f51b5;
+      border-color: #3f51b5;
+      color: #ffffff;
+    }
+    .modal-content {
+      border: none;
+      border-radius: 12px;
+      background-color: transparent;
+    }
+    .modal-body {
+      padding: 0;
+    }
+    .modal-img {
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .footer {
+      font-size: 0.9rem;
+      color: #757575;
+    }
+  </style>
 </head>
-<body class="bg-light">
+<body>
   <div class="container py-5">
-    <header class="text-center mb-5 p-5 bg-primary text-white rounded-3">
+    <header class="header text-center">
       <h1 class="display-4">梦泽梗图仓库</h1>
       <p class="lead">梦泽一时兴起搭建的梗图库网站，共收藏了 169 张经典梗图。交流群：940994905</p>
     </header>
@@ -17,10 +100,9 @@
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255431251331224.jpg'">
-            <img src="memes/Image_255431251331224.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255431251331224.jpg" class="card-img-top" loading="lazy" alt="Image_255431251331224.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255431251331224.jpg</p>
             </div>
@@ -28,10 +110,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255436225346301.jpg'">
-            <img src="memes/Image_255436225346301.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255436225346301.jpg" class="card-img-top" loading="lazy" alt="Image_255436225346301.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255436225346301.jpg</p>
             </div>
@@ -39,10 +120,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255446892533686.jpg'">
-            <img src="memes/Image_255446892533686.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255446892533686.jpg" class="card-img-top" loading="lazy" alt="Image_255446892533686.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255446892533686.jpg</p>
             </div>
@@ -50,10 +130,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255456166102918.jpg'">
-            <img src="memes/Image_255456166102918.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255456166102918.jpg" class="card-img-top" loading="lazy" alt="Image_255456166102918.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255456166102918.jpg</p>
             </div>
@@ -61,10 +140,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255464476885995.jpg'">
-            <img src="memes/Image_255464476885995.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255464476885995.jpg" class="card-img-top" loading="lazy" alt="Image_255464476885995.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255464476885995.jpg</p>
             </div>
@@ -72,10 +150,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255478017987150.jpg'">
-            <img src="memes/Image_255478017987150.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255478017987150.jpg" class="card-img-top" loading="lazy" alt="Image_255478017987150.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255478017987150.jpg</p>
             </div>
@@ -83,10 +160,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255482884377996.jpg'">
-            <img src="memes/Image_255482884377996.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255482884377996.jpg" class="card-img-top" loading="lazy" alt="Image_255482884377996.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255482884377996.jpg</p>
             </div>
@@ -94,10 +170,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255491725905689.jpg'">
-            <img src="memes/Image_255491725905689.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255491725905689.jpg" class="card-img-top" loading="lazy" alt="Image_255491725905689.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255491725905689.jpg</p>
             </div>
@@ -105,10 +180,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255499492197997.jpg'">
-            <img src="memes/Image_255499492197997.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255499492197997.jpg" class="card-img-top" loading="lazy" alt="Image_255499492197997.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255499492197997.jpg</p>
             </div>
@@ -116,10 +190,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255501992136459.jpg'">
-            <img src="memes/Image_255501992136459.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255501992136459.jpg" class="card-img-top" loading="lazy" alt="Image_255501992136459.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255501992136459.jpg</p>
             </div>
@@ -127,10 +200,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255504571070921.jpg'">
-            <img src="memes/Image_255504571070921.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255504571070921.jpg" class="card-img-top" loading="lazy" alt="Image_255504571070921.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255504571070921.jpg</p>
             </div>
@@ -138,10 +210,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255510507696998.jpg'">
-            <img src="memes/Image_255510507696998.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255510507696998.jpg" class="card-img-top" loading="lazy" alt="Image_255510507696998.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255510507696998.jpg</p>
             </div>
@@ -149,10 +220,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255514916868383.jpg'">
-            <img src="memes/Image_255514916868383.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255514916868383.jpg" class="card-img-top" loading="lazy" alt="Image_255514916868383.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255514916868383.jpg</p>
             </div>
@@ -160,10 +230,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255522601614306.jpg'">
-            <img src="memes/Image_255522601614306.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255522601614306.jpg" class="card-img-top" loading="lazy" alt="Image_255522601614306.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255522601614306.jpg</p>
             </div>
@@ -171,10 +240,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255528204805076.jpg'">
-            <img src="memes/Image_255528204805076.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255528204805076.jpg" class="card-img-top" loading="lazy" alt="Image_255528204805076.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255528204805076.jpg</p>
             </div>
@@ -182,10 +250,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255531866931230.jpg'">
-            <img src="memes/Image_255531866931230.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255531866931230.jpg" class="card-img-top" loading="lazy" alt="Image_255531866931230.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255531866931230.jpg</p>
             </div>
@@ -193,10 +260,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255535050694923.jpg'">
-            <img src="memes/Image_255535050694923.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255535050694923.jpg" class="card-img-top" loading="lazy" alt="Image_255535050694923.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255535050694923.jpg</p>
             </div>
@@ -204,10 +270,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255541537049308.jpg'">
-            <img src="memes/Image_255541537049308.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255541537049308.jpg" class="card-img-top" loading="lazy" alt="Image_255541537049308.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255541537049308.jpg</p>
             </div>
@@ -215,10 +280,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255558378799462.jpg'">
-            <img src="memes/Image_255558378799462.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255558378799462.jpg" class="card-img-top" loading="lazy" alt="Image_255558378799462.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255558378799462.jpg</p>
             </div>
@@ -226,10 +290,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255561012904386.jpg'">
-            <img src="memes/Image_255561012904386.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255561012904386.jpg" class="card-img-top" loading="lazy" alt="Image_255561012904386.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255561012904386.jpg</p>
             </div>
@@ -237,10 +300,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255563871526617.jpg'">
-            <img src="memes/Image_255563871526617.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255563871526617.jpg" class="card-img-top" loading="lazy" alt="Image_255563871526617.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255563871526617.jpg</p>
             </div>
@@ -248,10 +310,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255568926929386.jpg'">
-            <img src="memes/Image_255568926929386.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255568926929386.jpg" class="card-img-top" loading="lazy" alt="Image_255568926929386.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255568926929386.jpg</p>
             </div>
@@ -259,10 +320,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255571921635848.jpg'">
-            <img src="memes/Image_255571921635848.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255571921635848.jpg" class="card-img-top" loading="lazy" alt="Image_255571921635848.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255571921635848.jpg</p>
             </div>
@@ -270,10 +330,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_255576938871540.jpg'">
-            <img src="memes/Image_255576938871540.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_255576938871540.jpg" class="card-img-top" loading="lazy" alt="Image_255576938871540.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_255576938871540.jpg</p>
             </div>
@@ -281,10 +340,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_3019716896102.jpg'">
-            <img src="memes/Image_3019716896102.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_3019716896102.jpg" class="card-img-top" loading="lazy" alt="Image_3019716896102.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_3019716896102.jpg</p>
             </div>
@@ -292,10 +350,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_3027154057949.jpg'">
-            <img src="memes/Image_3027154057949.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_3027154057949.jpg" class="card-img-top" loading="lazy" alt="Image_3027154057949.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_3027154057949.jpg</p>
             </div>
@@ -303,10 +360,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_3034859318026.jpg'">
-            <img src="memes/Image_3034859318026.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_3034859318026.jpg" class="card-img-top" loading="lazy" alt="Image_3034859318026.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_3034859318026.jpg</p>
             </div>
@@ -314,10 +370,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_3037927276795.jpg'">
-            <img src="memes/Image_3037927276795.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_3037927276795.jpg" class="card-img-top" loading="lazy" alt="Image_3037927276795.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_3037927276795.jpg</p>
             </div>
@@ -325,10 +380,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_3041282230950.jpg'">
-            <img src="memes/Image_3041282230950.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_3041282230950.jpg" class="card-img-top" loading="lazy" alt="Image_3041282230950.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_3041282230950.jpg</p>
             </div>
@@ -336,10 +390,9 @@
         </div>
       
         <div class="col">
-          <div class="card h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+          <div class="card h-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
                onclick="document.getElementById('lightboxImage').src = 'memes/Image_3047778781335.jpg'">
-            <img src="memes/Image_3047778781335.jpg" class="card-img-top" loading="lazy" 
-                 style="height: 250px; object-fit: cover">
+            <img src="memes/Image_3047778781335.jpg" class="card-img-top" loading="lazy" alt="Image_3047778781335.jpg">
             <div class="card-body">
               <p class="card-text text-truncate">Image_3047778781335.jpg</p>
             </div>
@@ -353,7 +406,9 @@
         <ul class="pagination justify-content-center">
           
             <li class="page-item">
-              <a class="page-link" href="index-3.html">←</a>
+              <a class="page-link" href="index-3.html">
+                <span class="material-icons">chevron_left</span>
+              </a>
             </li>
           
           
@@ -383,29 +438,32 @@
           
           
             <li class="page-item">
-              <a class="page-link" href="index-5.html">→</a>
+              <a class="page-link" href="index-5.html">
+                <span class="material-icons">chevron_right</span>
+              </a>
             </li>
           
         </ul>
       </nav>
     
 
-    <footer class="mt-5 py-4 text-center text-muted">
+    <footer class="footer mt-5 py-4 text-center">
       由MeMe Gallery静态生成器驱动 | MengZe2
     </footer>
   </div>
 
   <!-- 模态框 -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1">
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-body text-center p-0">
-          <img id="lightboxImage" class="img-fluid">
+        <div class="modal-body text-center">
+          <img id="lightboxImage" class="modal-img img-fluid" alt="Lightbox Image">
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.mengze.vip/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
 </body>
